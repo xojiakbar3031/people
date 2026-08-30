@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f5;
+  color: #222;
+}
+
+.header {
+  background: linear-gradient(135deg, #4338ca, #6366f1);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.search-box,
+.select-box,
+.reset-btn {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-box:focus {
+  border-color: #6366f1;
+}
+
+.select-box {
+  cursor: pointer;
+}
+
+.reset-btn {
+  cursor: pointer;
+  font-weight: 600;
+  color: #4338ca;
+  transition: background 0.15s;
+}
+
+.reset-btn:hover {
+  background: #eef2ff;
+}
+
+.result-count {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Rasm joyi - bo'sh, dashed placeholder. data ichida img: "" ga o'zing manzil qo'shasan */
+.card-img {
+  width: 100%;
+  height: 140px;
+  background: #eef2ff;
+  border-bottom: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img-placeholder {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.card-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.card-sub {
+  font-size: 13px;
+  color: #777;
+  margin-top: 2px;
+}
+
+.card-heart {
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  color: #ccc;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.card-heart.liked {
+  color: #e0245e;
+  transform: scale(1.15);
+}
+
+.card-stats {
+  margin-top: auto;
+  font-size: 13px;
+  color: #444;
+  font-weight: 600;
+}
+
+.no-result {
+  display: none;
+  text-align: center;
+  padding: 40px 0;
+  color: #999;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .select-box,
+  .search-box {
+    width: 100%;
+  }
+}

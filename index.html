@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>🧑 People</h1>
+    <p>Jamoa a'zolari ro'yxati</p>
+  </header>
+
+  <main class="container">
+
+    <div class="controls">
+      <input type="text" id="searchInput" class="search-box" placeholder="Ism bo'yicha qidiring...">
+
+      <select id="jobFilter" class="select-box">
+        <option value="all">Barcha kasblar</option>
+      </select>
+
+      <select id="sortSelect" class="select-box">
+        <option value="default">Saralash</option>
+        <option value="nameAsc">Ism: A → Z</option>
+        <option value="nameDesc">Ism: Z → A</option>
+        <option value="ageAsc">Yosh: kichik → katta</option>
+        <option value="ageDesc">Yosh: katta → kichik</option>
+      </select>
+
+      <button id="resetBtn" class="reset-btn">Tozalash</button>
+    </div>
+
+    <p class="result-count" id="resultCount"></p>
+
+    <div class="cards-grid" id="cardsGrid"></div>
+
+    <p class="no-result" id="noResult">Hech narsa topilmadi 😔</p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
